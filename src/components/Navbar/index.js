@@ -4,8 +4,6 @@ import {
     NavLink,
     Bars,
     NavMenu,
-    NavBtn,
-    NavBtnLink,
 } from './NavbarElements';
 
 const Navbar = () => {
@@ -28,11 +26,8 @@ const Navbar = () => {
                     About
                 </NavLink>
                  {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}             
+                     
             </NavMenu>
-            <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
         </Nav>
         </>
     );
