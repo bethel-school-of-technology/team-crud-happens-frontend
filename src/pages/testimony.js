@@ -1,4 +1,5 @@
 import React from 'react';
+import CreateTestimony from './CreateTestimony';
 
 const Testimony = () => {
     return (
@@ -9,10 +10,12 @@ const Testimony = () => {
                 alignItems: 'right',
                 height: '100vh'
             }}
-            >
-                <h1>Testimonies</h1>
-            </div>
+        >
+            <h1>Testimonies</h1>
+            <CreateTestimony></CreateTestimony>
+        </div>
     );
 };
 
-export default Testimony;
+export default Testimony
+  
