@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages';
@@ -12,9 +12,9 @@ const App = () => {
         <Router>
         <Navbar />
         <Switch>
-            <Route path='/' exact component={Home} />
+            <Route path='/home' exact component={Home} />
             <Route path='/testimony' component={Testimony} />
-            <Route path='/trestments' component={Treatments} />
+            <Route path='/treatments' component={Treatments} />
             <Route path='/about' component={About} />
         </Switch>
     </Router>
