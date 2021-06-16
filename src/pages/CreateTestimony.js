@@ -28,7 +28,23 @@ class CreateTestimony extends React.Component {
             tag: this.state.tag,
         };
         console.log(data)
-    }
+                
+        axios
+      .post('http://localhost:3000/testimony', data)
+      .then(res => {
+        this.setState({
+          title: '',
+          message:'',
+          name:'',
+          tag:'',
+
+        })
+        this.props.history.push('/testimony');
+      })
+      .catch(err => {
+        console.log("Error in CreateTestimony!");
+      })
+  };
 
 
 
