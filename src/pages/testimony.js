@@ -6,8 +6,8 @@ const Testimony = () => {
         <div
             style={{
                 display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'right',
+                justifyContent: 'left',
+                alignItems: 'left',
                 height: '100vh'
             }}
         >
