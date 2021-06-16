@@ -1,21 +1,27 @@
 import React from 'react';
 import CreateTestimony from './CreateTestimony';
+import DisplayList from './DisplayList';
 
 const Testimony = () => {
     return (
         <div
             style={{
                 display: 'flex',
-                justifyContent: 'left',
+                justifyContent: 'center',
                 alignItems: 'left',
                 height: '100vh'
             }}
         >
-            <h1></h1>
+            
             <CreateTestimony></CreateTestimony>
-        </div>
-    );
-};
+            <DisplayList></DisplayList>
+        </div>)
+      
+   
+       
+ 
+}
 
 export default Testimony
+
   
