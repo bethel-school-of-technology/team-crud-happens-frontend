@@ -38,16 +38,11 @@ class CreateTestimony extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-8 m-auto">
-                                <br />
-                                <Link to="/" className="btn btn-outline-warning float-left">
-
-                                </Link>
+                            
                             </div>
                             <div className="col-md-8 m-auto">
                                 <h1 className="display-4 text-center">Add Testimony</h1>
-                                <p className="lead text-center">
-                                    Create Testimony
-                                </p>
+
 
                                 <form noValidate onSubmit={this.onSubmit}>
                                     <div className='form-group'>
@@ -60,8 +55,7 @@ class CreateTestimony extends React.Component {
                                             onChange={this.onChange}
                                         />
                                     </div>
-                                    <br />
-
+                                    
                                     <div className='form-group'>
                                         <input
                                             type='text'
@@ -100,6 +94,7 @@ class CreateTestimony extends React.Component {
                                     <input
                                         type="submit"
                                         className="btn btn-outline-warning btn-block mt-4"
+                                        
                                     />
                                 </form>
                             </div>

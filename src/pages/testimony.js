@@ -11,7 +11,7 @@ const Testimony = () => {
                 height: '100vh'
             }}
         >
-            <h1>Testimonies</h1>
+            <h1></h1>
             <CreateTestimony></CreateTestimony>
         </div>
     );

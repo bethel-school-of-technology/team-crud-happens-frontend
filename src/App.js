@@ -7,6 +7,7 @@ import About from './pages/about';
 import Testimony from './pages/testimony';
 import Treatments from './pages/treatments';
 
+
 const App = () => {
     return (
         <Router>
