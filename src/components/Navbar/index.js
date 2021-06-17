@@ -28,12 +28,12 @@ const Navbar = () => {
                 </NavLink>
                  {/* Second Nav */}
             </NavMenu>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown title="Menu" id="basic-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Home</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">Testimony</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3">Treatments</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.4">About</NavDropdown.Item>
       </NavDropdown>
         </Nav>
         </>
