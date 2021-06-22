@@ -3,14 +3,15 @@ import axios from 'axios';
 import '../App.css';
 
 
+
 class CreateTestimony extends React.Component {
     constructor() {
         super();
         this.state = {
             title: '',
             message: '',
-            Name: '',
-            tag: '',
+            name: '',
+            tags: '',
         };
     }
 
@@ -25,18 +26,18 @@ class CreateTestimony extends React.Component {
             title: this.state.title,
             message: this.state.message,
             name: this.state.name,
-            tag: this.state.tag,
+            tags: this.state.tags,
         };
         console.log(data)
                 
         axios
-      .post('http://localhost:5000/testimony', data)
+      .post('http://localhost:8080/testimony', data)
       .then(res => {
         this.setState({
           title: '',
           message:'',
           name:'',
-          tag:'',
+          tags:'',
 
         })
         this.props.history.push('/testimony');
@@ -97,10 +98,10 @@ class CreateTestimony extends React.Component {
                                     <div className='form-group'>
                                         <input
                                             type='text'
-                                            placeholder='Tag'
-                                            name='Tag'
+                                            placeholder='Tags'
+                                            name='Tags'
                                             className='form-control'
-                                            value={this.state.tag}
+                                            value={this.state.tags}
                                             onChange={this.onChange}
                                         />
                                     </div>
