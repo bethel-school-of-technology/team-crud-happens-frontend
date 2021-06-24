@@ -1,8 +1,12 @@
 import React from 'react';
+import CreateTreatments from './CreateTreatments';
+import TreatmentList from './TreatmentList';
 
 export const Treatments = () => (
         <div>
         <h1>Treatments</h1>
+        <CreateTreatments></CreateTreatments>
+        <TreatmentList></TreatmentList>
         </div>
     )
 // import React from 'react';
