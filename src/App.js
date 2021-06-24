@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Testimony } from './pages/Testimony';
-import { Treatments } from './pages/Treatments';
-import { About } from './pages/About';
+import { Testimony } from './pages/testimony';
+import { Treatments } from './pages/treatments';
+import { About } from './pages/about';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
