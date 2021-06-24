@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-//import TreatmentList from './TreatmentList';
+import axios from 'axios';
 
 class TreatmentList extends React.Component {
   constructor(props) {
@@ -10,18 +10,34 @@ class TreatmentList extends React.Component {
     };
   }
 
+componentDidMount() {
+  axios
+  .get('http://localhost:5000/treatments')
+  .then(res => {
+      this.setState({
+          treatments: res.data
 
+      })
+      console.log(res)
+  })
+  .catch(err => {
+      console.log("Error getting treatments!");
+  })
+}
 
 
   renderTreatmentList() {
+    console.log(this.state.treatments)
     return this.state.treatments.map((treatments, index) => {
-      const { title, message, name, tags } = treatments
+      const { title, message, name, tags, createdAt } = treatments
       return (
-        <tr key={title}>
+        // <div>{createdAt}</div>
+        <tr>
           <td>{title}</td>
           <td>{message}</td>
           <td>{name}</td>
           <td>{tags}</td>
+          <td>{createdAt}</td>
         </tr>
       )
     })
