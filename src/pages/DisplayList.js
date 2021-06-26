@@ -36,7 +36,7 @@ class DisplayList extends React.Component {
       const { title, message, name, tags, createdAt } = testimony
       return (
 
-        //<CardColumns>
+        
         <Card
           bg='dark'>
           <Card.Img variant="top" src="holder.js/100px160" />
@@ -51,7 +51,7 @@ class DisplayList extends React.Component {
             <small className="text-muted">{createdAt}</small>
           </Card.Footer>
         </Card>
-        //</CardColumns>
+        
       )
     })
 
@@ -64,9 +64,9 @@ class DisplayList extends React.Component {
       <div>
           <h1 id='title'>Testimonies</h1>
         <CardColumns>
-          {/* <Row md={4} xs={1} className="g-4"> */}
+          
           {this.renderDisplayList()}
-          {/* </Row> */}
+          
 
         </CardColumns>
       </div>
