@@ -1,7 +1,9 @@
 import React from 'react';
-
+import { Card } from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
+import CardColumns from 'react-bootstrap/CardColumns'
+
 
 class DisplayList extends React.Component {
   constructor(props) {
@@ -11,20 +13,20 @@ class DisplayList extends React.Component {
     };
   }
 
-componentDidMount() {
-  axios
-  .get('http://localhost:5000/testimony')
-  .then(res => {
-      this.setState({
+  componentDidMount() {
+    axios
+      .get('http://localhost:5000/testimony')
+      .then(res => {
+        this.setState({
           testimonies: res.data
 
+        })
+        console.log(res)
       })
-      console.log(res)
-  })
-  .catch(err => {
-      console.log("Error getting testimonies!");
-  })
-}
+      .catch(err => {
+        console.log("Error getting testimonies!");
+      })
+  }
 
 
   renderDisplayList() {
@@ -32,14 +34,22 @@ componentDidMount() {
     return this.state.testimonies.map((testimony, index) => {
       const { title, message, name, tags, createdAt } = testimony
       return (
-        // <div>{createdAt}</div>
-        <tr>
-          <td>{title}</td>
-          <td>{message}</td>
-          <td>{name}</td>
-          <td>{tags}</td>
-          <td>{createdAt}</td>
-        </tr>
+        <CardColumns>
+          <Card
+            bg='dark'>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Header>{title}</Card.Header>
+              <Card.Title>{name}</Card.Title>
+              <Card.Text>
+                {message}
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">{createdAt}</small>
+            </Card.Footer>
+          </Card>
+        </CardColumns>
       )
     })
 
@@ -52,11 +62,7 @@ componentDidMount() {
 
       <div>
         <h1 id='title'>Testimonies</h1>
-        <table id='testimonies'>
-          <tbody>
-            {this.renderDisplayList()}
-          </tbody>
-        </table>
+        {this.renderDisplayList()}
       </div>
 
     )
