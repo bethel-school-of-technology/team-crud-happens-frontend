@@ -41,7 +41,7 @@ class CreateTestimony extends React.Component {
                     tags: '',
 
                 })
-                
+               window.location.reload(false) 
             })
             .catch(err => {
                 console.log("Error in CreateTestimony!");

@@ -41,6 +41,7 @@ class CreateTreatments extends React.Component {
                     tags: '',
 
                 })
+                window.location.reload(false)
                 
             })
             .catch(err => {
