@@ -4,7 +4,6 @@ import DisplayList from './DisplayList';
 
 export const Testimony = () => (
         <div>
-        <h1>Testimony</h1>
         <CreateTestimony></CreateTestimony>
         <DisplayList></DisplayList>
         </div>

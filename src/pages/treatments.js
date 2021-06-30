@@ -4,7 +4,6 @@ import TreatmentList from './TreatmentList';
 
 export const Treatments = () => (
         <div>
-        <h1>Treatments</h1>
         <CreateTreatments></CreateTreatments>
         <TreatmentList></TreatmentList>
         </div>
