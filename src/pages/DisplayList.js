@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
 import CardColumns from 'react-bootstrap/CardColumns'
