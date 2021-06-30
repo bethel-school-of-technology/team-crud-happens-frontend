@@ -1,6 +1,8 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
+import CardColumns from 'react-bootstrap/CardColumns'
 
 class TreatmentList extends React.Component {
   constructor(props) {
@@ -31,14 +33,22 @@ componentDidMount() {
     return this.state.treatments.map((treatments, index) => {
       const { title, message, name, tags, createdAt } = treatments
       return (
-        // <div>{createdAt}</div>
-        <tr>
-          <td>{title}</td>
-          <td>{message}</td>
-          <td>{name}</td>
-          <td>{tags}</td>
-          <td>{createdAt}</td>
-        </tr>
+
+        <Card
+        bg='dark'>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Header>{title}</Card.Header>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>
+            {message}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">{createdAt}</small>
+        </Card.Footer>
+      </Card>
+
       )
     })
 
@@ -51,11 +61,9 @@ componentDidMount() {
 
       <div>
         <h1 id='title'>Treatments</h1>
-        <table id='treatments'>
-          <tbody>
+        <CardColumns>
             {this.renderTreatmentList()}
-          </tbody>
-        </table>
+       </CardColumns>  
       </div>
 
     )
