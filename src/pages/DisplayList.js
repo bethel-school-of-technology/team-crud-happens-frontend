@@ -33,13 +33,13 @@ class DisplayList extends React.Component {
   renderDisplayList() {
     console.log(this.state.testimonies)
     return this.state.testimonies.map((testimony, index) => {
-      const { title, message, name, tags, createdAt } = testimony
+      const { title, message, name, createdAt, image_url } = testimony
       return (
 
         
         <Card
-          bg='dark'>
-          <Card.Img variant="top" src="holder.js/100px160" />
+          bg='light'>
+          <Card.Img variant="top" src={image_url} />
           <Card.Body>
             <Card.Header>{title}</Card.Header>
             <Card.Title>{name}</Card.Title>

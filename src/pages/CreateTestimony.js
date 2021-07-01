@@ -11,12 +11,15 @@ class CreateTestimony extends React.Component {
             title: '',
             message: '',
             name: '',
-            tags: '',
         };
     }
 
     onChange = e => {
         this.setState({ [e.target.name]: e.target.value });
+    };
+
+    fileChange = e => {
+        this.setState({ file: e.target.files[0] })
     };
 
     onSubmit = e => {
@@ -26,22 +29,41 @@ class CreateTestimony extends React.Component {
             title: this.state.title,
             message: this.state.message,
             name: this.state.name,
-            tags: this.state.tags,
         };
         console.log(data)
 
+        let fileData = new FormData();
+        fileData.set(
+            'image',
+            this.state.file,
+            `${this.state.file.lastmodified}-${this.state.file.name}`,
+        )
+        fileData.set(
+            'name',
+            this.state.name
+        )
+        fileData.set(
+            'title',
+            this.state.title
+        )
+        fileData.set(
+            'message',
+            this.state.message
+        )
+        //document.getElementById("file-id").files[0].name;
+
         axios
-            .post('http://localhost:5000/testimony', data)
+            .post('http://localhost:5000/testimony', fileData)
             .then(res => {
                 console.log(res)
                 this.setState({
                     title: '',
                     message: '',
                     name: '',
-                    tags: '',
+                    file: '',
 
                 })
-               window.location.reload(false) 
+                window.location.reload(false)
             })
             .catch(err => {
                 console.log("Error in CreateTestimony!");
@@ -76,6 +98,16 @@ class CreateTestimony extends React.Component {
 
                                 <div className='form-group'>
                                     <input
+                                        type='file'
+                                        placeholder='Image'
+                                        name='image_url'
+                                        className='form-control'
+                                        onChange={this.fileChange}
+                                    />
+                                </div>
+
+                                <div className='form-group'>
+                                    <input
                                         type='text'
                                         placeholder='Message'
                                         name='message'
@@ -96,16 +128,6 @@ class CreateTestimony extends React.Component {
                                     />
                                 </div>
 
-                                <div className='form-group'>
-                                    <input
-                                        type='text'
-                                        placeholder='Tags'
-                                        name='Tags'
-                                        className='form-control'
-                                        value={this.state.tags}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
 
 
 
