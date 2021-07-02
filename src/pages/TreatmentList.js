@@ -35,8 +35,8 @@ componentDidMount() {
       return (
 
         <Card
-        bg='dark'>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        bg='dark'
+        text='white'>
         <Card.Body>
           <Card.Header>{title}</Card.Header>
           <Card.Title>{name}</Card.Title>
