@@ -11,6 +11,7 @@ class CreateTestimony extends React.Component {
             title: '',
             message: '',
             name: '',
+            imageValid: 'true'
         };
     }
 
@@ -33,6 +34,12 @@ class CreateTestimony extends React.Component {
         console.log(data)
 
         let fileData = new FormData();
+        if (!this.state.file) {
+            this.setState({ imageValid: false })
+            return
+        }
+
+
         fileData.set(
             'image',
             this.state.file,
@@ -50,7 +57,7 @@ class CreateTestimony extends React.Component {
             'message',
             this.state.message
         )
-        //document.getElementById("file-id").files[0].name;
+
 
         axios
             .post('http://localhost:5000/testimony', fileData)
@@ -61,6 +68,7 @@ class CreateTestimony extends React.Component {
                     message: '',
                     name: '',
                     file: '',
+                    imageValid: 'true',
 
                 })
                 window.location.reload(false)
@@ -104,6 +112,7 @@ class CreateTestimony extends React.Component {
                                         className='form-control'
                                         onChange={this.fileChange}
                                     />
+                                    {this.state.imageValid ? false : <p>show your face please</p>}
                                 </div>
 
                                 <div className='form-group'>
