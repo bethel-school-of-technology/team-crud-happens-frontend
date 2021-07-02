@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 
+//This file is for navigation bar with style. 
+
+
+
 const Styles = styled.div`
 .navbar {
     background-color: #282c34;
