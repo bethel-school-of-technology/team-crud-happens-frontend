@@ -5,13 +5,6 @@ import Image from 'react-bootstrap/Image'
 import '../App.css';
 
 
-//using the fat arrow syntax in my function so it help in decreasing line of code. 
-//<Row> is a component that will display picture image in the form of a row.
-//<Col> is a component that will display picture image in the form of a column.
-//<Image> is a component that will put my image in my home page. 
-//Fluid- is a prop that scales the image to the size of the page.
-
-
 export const Home = () => (
         <div>
         <h1>Welcome To Our Community!</h1>
