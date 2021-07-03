@@ -41,11 +41,11 @@ class DisplayList extends React.Component {
           bg='light'>
           <Card.Img variant="top" src={image_url} />
           <Card.Body>
-            <Card.Header>{title}</Card.Header>
-            <Card.Title>{name}</Card.Title>
+          <Card.Header>{title}</Card.Header>
             <Card.Text>
               {message}
             </Card.Text>
+            <Card.Subtitle className="text-muted">{name}</Card.Subtitle>
           </Card.Body>
           <Card.Footer>
             <small className="text-muted">{createdAt}</small>

@@ -97,7 +97,7 @@ class CreateTreatments extends React.Component {
 
                                 <input
                                     type="submit"
-                                    className="btn btn-outline-warning btn-block mt-4"
+                                    className="btn btn-warning btn-block mt-4"
 
                                 />
                             </form>

@@ -89,7 +89,7 @@ class CreateTestimony extends React.Component {
 
                         </div>
                         <div className="col-md-8 m-auto">
-                            <h1 className="display-4 text-center">Add Testimony</h1>
+                            <h1 className="display-4 text-center">Share Your Testimony</h1>
 
 
                             <form noValidate onSubmit={this.onSubmit}>
@@ -112,13 +112,13 @@ class CreateTestimony extends React.Component {
                                         className='form-control'
                                         onChange={this.fileChange}
                                     />
-                                    {this.state.imageValid ? false : <p>show your face please</p>}
+                                    {this.state.imageValid ? false : <p>PLEASE SELECT A PHOTO</p>}
                                 </div>
 
                                 <div className='form-group'>
                                     <input
                                         type='text'
-                                        placeholder='Message'
+                                        placeholder='Your Testimony'
                                         name='message'
                                         className='form-control'
                                         value={this.state.message}
@@ -129,7 +129,7 @@ class CreateTestimony extends React.Component {
                                 <div className='form-group'>
                                     <input
                                         type='text'
-                                        placeholder='Name'
+                                        placeholder='Your Name'
                                         name='name'
                                         className='form-control'
                                         value={this.state.name}
@@ -142,7 +142,7 @@ class CreateTestimony extends React.Component {
 
                                 <input
                                     type="submit"
-                                    className="btn btn-outline-warning btn-block mt-4"
+                                    className="btn btn-primary btn-block mt-4"
 
                                 />
                             </form>
