@@ -14,10 +14,11 @@ export const Home = () => (
         </Image>
         </Col>
         </Row>
-        
+      <br></br>  
       <p>
       Stroke Survivors are living testimonies. They have endured much and came out on the otherside victorious! 
       </p>
       </div>
+      
     )
 
