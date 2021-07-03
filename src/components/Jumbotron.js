@@ -10,6 +10,7 @@ const Styles = styled.div`
     color: #ccc;
     height: 200px;
     position: relative;
+    text-align: center;
     z-index: -2;
 }
 
