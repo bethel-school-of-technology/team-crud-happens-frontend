@@ -39,10 +39,10 @@ componentDidMount() {
 
         <Card.Body>
           <Card.Header>{title}</Card.Header>
-          <Card.Title>{name}</Card.Title>
           <Card.Text>
             {message}
           </Card.Text>
+          <Card.Subtitle className="text-muted">{name}</Card.Subtitle>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">{createdAt}</small>

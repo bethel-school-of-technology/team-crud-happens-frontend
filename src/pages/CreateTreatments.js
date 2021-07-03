@@ -57,14 +57,14 @@ class CreateTreatments extends React.Component {
 
                         </div>
                         <div className="col-md-8 m-auto">
-                            <h1 className="display-4 text-center">Add Treatment</h1>
+                            <h1 className="display-4 text-center">Treatment Suggestions</h1>
 
 
                             <form noValidate onSubmit={this.onSubmit}>
                                 <div className='form-group'>
                                     <input
                                         type='text'
-                                        placeholder='Treatment Title'
+                                        placeholder='Name of Treatment'
                                         name='title'
                                         className='form-control'
                                         value={this.state.title}
@@ -75,7 +75,7 @@ class CreateTreatments extends React.Component {
                                 <div className='form-group'>
                                     <input
                                         type='text'
-                                        placeholder='Message'
+                                        placeholder='Description of Treatment'
                                         name='message'
                                         className='form-control'
                                         value={this.state.message}
@@ -86,7 +86,7 @@ class CreateTreatments extends React.Component {
                                 <div className='form-group'>
                                     <input
                                         type='text'
-                                        placeholder='Name'
+                                        placeholder='Your Name'
                                         name='name'
                                         className='form-control'
                                         value={this.state.name}
