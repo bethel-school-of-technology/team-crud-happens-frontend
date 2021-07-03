@@ -8,7 +8,7 @@ import '../App.css';
 
 export const About = () => (
         <div>
-        <h1>About</h1>
+        <h1>About Us</h1>
 
         <Row className="show-grid text-center">
         <Col xs={12} sm={4} className="person-wrapper">

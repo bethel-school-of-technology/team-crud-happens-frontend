@@ -11,7 +11,6 @@ class CreateTreatments extends React.Component {
             title: '',
             message: '',
             name: '',
-            tags: '',
         };
     }
 
@@ -26,7 +25,6 @@ class CreateTreatments extends React.Component {
             title: this.state.title,
             message: this.state.message,
             name: this.state.name,
-            tags: this.state.tags,
         };
         console.log(data)
 
@@ -38,7 +36,6 @@ class CreateTreatments extends React.Component {
                     title: '',
                     message: '',
                     name: '',
-                    tags: '',
 
                 })
                 window.location.reload(false)
@@ -96,18 +93,6 @@ class CreateTreatments extends React.Component {
                                         onChange={this.onChange}
                                     />
                                 </div>
-
-                                <div className='form-group'>
-                                    <input
-                                        type='text'
-                                        placeholder='Tags'
-                                        name='Tags'
-                                        className='form-control'
-                                        value={this.state.tags}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-
 
 
                                 <input

@@ -31,12 +31,12 @@ componentDidMount() {
   renderTreatmentList() {
     console.log(this.state.treatments)
     return this.state.treatments.map((treatments, index) => {
-      const { title, message, name, tags, createdAt } = treatments
+      const { title, message, name, createdAt } = treatments
       return (
 
-        <Card
-        bg='dark'
-        text='white'>
+        <Card border="dark"
+        bg='light'>
+
         <Card.Body>
           <Card.Header>{title}</Card.Header>
           <Card.Title>{name}</Card.Title>
